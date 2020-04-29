@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E1B187D-096D-4CBE-9AF4-F59F1737499F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Remoteinstallation</RootNamespace>
+    <AssemblyName>Remoteinstallation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>p00main</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="c00openfilewithprompt.cs" />
+    <Compile Include="c03loginwithprompt.cs" />
+    <Compile Include="c15checkstringempty.cs" />
+    <Compile Include="c14installation.cs" />
+    <Compile Include="c13deinstallation.cs" />
+    <Compile Include="c12kopierequelldateinachremote.cs" />
+    <Compile Include="c11loeschequelldateiremote.cs" />
+    <Compile Include="c10istquelldateiremote.cs" />
+    <Compile Include="c08workstationprozesstest.cs" />
+    <Compile Include="p04variablesfordecisions.cs" />
+    <Compile Include="c17msgboxjanein.cs" />
+    <Compile Include="p00_01_generischeinstanzenerzeugen.cs" />
+    <Compile Include="p00_02_prozedurinstanzenerzeugen.cs" />
+    <Compile Include="p00_00_main.cs" />
+    <Compile Include="c01fileexists.cs" />
+    <Compile Include="c02openandreadalllinesfromtextfile.cs" />
+    <Compile Include="c16msgbox.cs" />
+    <Compile Include="p03runthroughtheworkstationarray.cs" />
+    <Compile Include="p02loaddatafromworkstationlist.cs" />
+    <Compile Include="p01loaddatafromconfig.cs" />
+    <Compile Include="c04createnameoffilename.cs" />
+    <Compile Include="c05createfile.cs" />
+    <Compile Include="c06openfileforwriting.cs" />
+    <Compile Include="c07savestringinfile.cs" />
+    <Compile Include="c09zielpfad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

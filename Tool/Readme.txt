@@ -1,0 +1,1 @@
+Initialklasse ist "p00_00_main.cs". Von dort aus ist alles dokumentiert.
